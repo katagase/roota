@@ -1,5 +1,6 @@
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
+import { IconBadge } from "../IconBadge";
 import {
   IconSearch,
   IconBrain,
@@ -17,25 +18,25 @@ import {
 
 type Feature = {
   icon: typeof IconSearch;
-  bg: string;
+  variant: "navy" | "green";
   title: string;
   body: string;
   soon?: boolean;
 };
 
 const FEATURES: Feature[] = [
-  { icon: IconSearch, bg: "bg-navy-900", title: "ナレッジ検索（出典つき）", body: "規程・マニュアル・FAQを、聞くだけで出典つきで回答。" },
-  { icon: IconBrain, bg: "bg-green-600", title: "対話で質問", body: "知りたいことを聞くだけ。社内の知識から答えます。" },
-  { icon: IconDatabase, bg: "bg-navy-900", title: "文書の登録・管理", body: "規程・議事録・契約文書などをまとめて管理。" },
-  { icon: IconCheckBadge, bg: "bg-green-600", title: "書類・メールのチェック", body: "提出前に自社ルールで点検。記入漏れ・ミスを防止。" },
-  { icon: IconPen, bg: "bg-navy-900", title: "たたき台の自動作成", body: "報告書・メールの下書きを自動で作成。" },
-  { icon: IconUsers, bg: "bg-green-600", title: "会社・部門ごとに分離", body: "データを構造的に分離。他社の文書は混ざりません。" },
-  { icon: IconKey, bg: "bg-navy-900", title: "権限・ユーザー管理", body: "利用者と権限を柔軟に設定できます。" },
-  { icon: IconClipboard, bg: "bg-green-600", title: "利用状況の把握", body: "件数・利用量などの記録を確認（会話の中身は非公開）。" },
-  { icon: IconLock, bg: "bg-navy-900", title: "完全クローズド運用", body: "外部送信ゼロ。御社の環境・国内の閉域で完結。" },
-  { icon: IconMic, bg: "bg-navy-900", title: "議事録自動作成", body: "会議音声から、要点・決定事項を自動で議事録化。", soon: true },
-  { icon: IconRobot, bg: "bg-green-600", title: "AIエージェント", body: "定型業務を任せられる、業務特化アシスタント。", soon: true },
-  { icon: IconPhone, bg: "bg-navy-900", title: "iPhone / Android アプリ", body: "専用アプリで外出先でも。（現在もモバイルWeb対応）", soon: true },
+  { icon: IconSearch, variant: "navy", title: "ナレッジ検索（出典つき）", body: "規程・マニュアル・FAQを、聞くだけで出典つきで回答。" },
+  { icon: IconBrain, variant: "green", title: "対話で質問", body: "知りたいことを聞くだけ。社内の知識から答えます。" },
+  { icon: IconDatabase, variant: "navy", title: "文書の登録・管理", body: "規程・議事録・契約文書などをまとめて管理。" },
+  { icon: IconCheckBadge, variant: "green", title: "書類・メールのチェック", body: "提出前に自社ルールで点検。記入漏れ・ミスを防止。" },
+  { icon: IconPen, variant: "navy", title: "たたき台の自動作成", body: "報告書・メールの下書きを自動で作成。" },
+  { icon: IconUsers, variant: "green", title: "会社・部門ごとに分離", body: "データを構造的に分離。他社の文書は混ざりません。" },
+  { icon: IconKey, variant: "navy", title: "権限・ユーザー管理", body: "利用者と権限を柔軟に設定できます。" },
+  { icon: IconClipboard, variant: "green", title: "利用状況の把握", body: "件数・利用量などの記録を確認（会話の中身は非公開）。" },
+  { icon: IconLock, variant: "navy", title: "完全クローズド運用", body: "外部送信ゼロ。御社の環境・国内の閉域で完結。" },
+  { icon: IconMic, variant: "navy", title: "議事録自動作成", body: "会議音声から、要点・決定事項を自動で議事録化。", soon: true },
+  { icon: IconRobot, variant: "green", title: "AIエージェント", body: "定型業務を任せられる、業務特化アシスタント。", soon: true },
+  { icon: IconPhone, variant: "navy", title: "iPhone / Android アプリ", body: "専用アプリで外出先でも。（現在もモバイルWeb対応）", soon: true },
 ];
 
 export function Features() {
@@ -57,9 +58,7 @@ export function Features() {
                     開発予定
                   </span>
                 )}
-                <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${f.bg} text-white`}>
-                  <f.icon className="h-6 w-6" />
-                </div>
+                <IconBadge icon={f.icon} variant={f.variant} className="h-14 w-14" iconClassName="h-7 w-7" />
                 <h3 className="mt-5 text-base font-bold text-navy-900">{f.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-navy-900/60">{f.body}</p>
               </div>

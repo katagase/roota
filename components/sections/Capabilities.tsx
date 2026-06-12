@@ -1,5 +1,6 @@
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
+import { IconBadge } from "../IconBadge";
 import { IconSearch, IconPen, IconCheckBadge } from "../icons";
 
 const CAPS = [
@@ -7,21 +8,21 @@ const CAPS = [
     n: "1",
     icon: IconSearch,
     tag: "探す",
-    circle: "bg-navy-900",
+    variant: "navy" as const,
     body: "散らばった規程・マニュアルを、聞くだけで即検索。出典付きで根拠まで確認できます。",
   },
   {
     n: "2",
     icon: IconPen,
     tag: "作る",
-    circle: "bg-green-600",
+    variant: "green" as const,
     body: "会議の議事録から月次報告書のたたき台まで。定型業務のアウトプットを自動で作成します。",
   },
   {
     n: "3",
     icon: IconCheckBadge,
     tag: "守る",
-    circle: "bg-navy-900",
+    variant: "navy" as const,
     body: "提出前に自社のルールでチェック。記入漏れやミスを、未然に防ぎます。",
   },
 ];
@@ -48,11 +49,12 @@ export function Capabilities() {
                   <span className="text-[8px] font-bold tracking-wider text-navy-900/50">POINT</span>
                   <span className="text-lg font-black text-navy-900">{cap.n}</span>
                 </span>
-                <div
-                  className={`mt-6 flex h-14 w-14 items-center justify-center rounded-2xl ${cap.circle} text-white shadow-lg`}
-                >
-                  <cap.icon className="h-7 w-7" />
-                </div>
+                <IconBadge
+                  icon={cap.icon}
+                  variant={cap.variant}
+                  className="mt-6 h-16 w-16"
+                  iconClassName="h-8 w-8"
+                />
                 <h3 className="mt-5 text-2xl font-black text-navy-900">{cap.tag}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-navy-900/65">{cap.body}</p>
               </div>

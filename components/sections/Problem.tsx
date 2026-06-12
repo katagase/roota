@@ -1,5 +1,6 @@
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
+import { IconBadge } from "../IconBadge";
 import { IconArrowRight, IconClipboard, IconCheckBadge, IconLock, IconKey } from "../icons";
 
 const ITEMS = [
@@ -39,9 +40,7 @@ export function Problem() {
           {ITEMS.map((item, i) => (
             <Reveal key={item.title} delay={i * 90} as="article">
               <div className="group h-full rounded-2xl bg-white p-7 shadow-sm ring-1 ring-navy-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy-900/5">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-navy-900 text-white">
-                  <item.icon className="h-7 w-7" />
-                </div>
+                <IconBadge icon={item.icon} variant="navy" />
                 <h3 className="mt-6 text-lg font-bold text-navy-900">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-navy-900/60">{item.body}</p>
               </div>
