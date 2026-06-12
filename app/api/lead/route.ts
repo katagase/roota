@@ -1,6 +1,4 @@
 import { NextResponse } from "next/server";
-import { readFile } from "fs/promises";
-import path from "path";
 
 export const runtime = "nodejs";
 
@@ -46,10 +44,13 @@ async function sendMail(token: string, from: string, message: Record<string, unk
   if (!res.ok) throw new Error(`sendMail failed: ${res.status} ${await res.text()}`);
 }
 
-async function loadBrochureAttachment() {
+// 資料PDFを URL 経由で取得して添付化（Vercel のサーバーレス関数でも確実に動く）。
+async function loadBrochureAttachment(pdfUrl: string) {
   try {
-    const buf = await readFile(path.join(process.cwd(), "public", "roota-document.pdf"));
-    if (buf.length > ATTACH_MAX) return null;
+    const res = await fetch(pdfUrl, { cache: "no-store" });
+    if (!res.ok) return null;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length === 0 || buf.length > ATTACH_MAX) return null;
     return {
       "@odata.type": "#microsoft.graph.fileAttachment",
       name: "ROOTA_サービス資料.pdf",
@@ -118,7 +119,7 @@ export async function POST(req: Request) {
   };
 
   // (2) 申込者へのサンクス（自動返信）メール
-  const attachment = await loadBrochureAttachment();
+  const attachment = await loadBrochureAttachment(pdfUrl);
   const docLine = attachment
     ? "本メールにサービス資料（PDF）を添付しております。"
     : `下記より資料をダウンロードいただけます。<br><a href="${pdfUrl}">${pdfUrl}</a>`;
