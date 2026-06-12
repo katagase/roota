@@ -1,0 +1,15 @@
+/node_modules
+/.next/
+/out/
+/build
+.DS_Store
+*.pem
+npm-debug.log*
+.env*
+next-env.d.ts
+
+# hero source originals (kept locally for re-cropping)
+/public/*.orig.jpg
+
+# allow committing the env template (but never real .env files)
+!.env.example

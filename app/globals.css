@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* ROOTA design tokens */
+@theme {
+  --color-navy-950: #0b1730;
+  --color-navy-900: #0f1f3d;
+  --color-navy-800: #16294d;
+  --color-navy-700: #1d3461;
+  --color-navy-600: #294a82;
+  /* Accent green (#2E9E6B). Token names kept as `green-*` so every
+     existing utility class switches at once. */
+  --color-green-600: #2e9e6b;
+  --color-green-500: #34ac75;
+  --color-green-400: #55c191;
+  --color-ink: #0f1f3d;
+  --color-mist: #f4f6fb;
+
+  /* Inter first → Latin/numerals use Inter; Japanese falls through to Noto. */
+  --font-sans: var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", Meiryo, ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Japanese kerning: tighten the metrics around kana/punctuation. */
+  font-feature-settings: "palt" 1;
+  font-kerning: normal;
+  /* Tracking + comfortable rhythm for 和文 readability. */
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+  /* Proper 禁則処理 (don't start a line with 、。」 etc.). */
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Avoid orphans / lone characters on the last line of body copy. */
+p {
+  text-wrap: pretty;
+}
+
+/* Balance multi-line headings so lines are more even. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Reveal-on-scroll animation */
+@keyframes roota-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: roota-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
