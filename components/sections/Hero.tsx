@@ -58,7 +58,7 @@ export function Hero() {
       <div className="relative mx-auto w-full max-w-7xl px-5 pt-28 pb-16 text-center text-white lg:px-8">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
           <IconShield className="h-4 w-4" />
-          情報を外に出さない、社内ナレッジAI
+          学習しない、ではなく渡さない。
         </span>
 
         <h1 className="mx-auto mt-7 max-w-4xl text-4xl font-black leading-[1.18] tracking-[0.12em] drop-shadow-sm sm:text-6xl lg:text-7xl">

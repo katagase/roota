@@ -5,6 +5,7 @@ import { Problem } from "@/components/sections/Problem";
 import { Difference } from "@/components/sections/Difference";
 import { About } from "@/components/sections/About";
 import { Capabilities } from "@/components/sections/Capabilities";
+import { Features } from "@/components/sections/Features";
 import { Security } from "@/components/sections/Security";
 import { Pricing } from "@/components/sections/Pricing";
 import { DownloadCTA } from "@/components/sections/DownloadCTA";
@@ -26,6 +27,7 @@ export default function Home() {
         <Difference />
         <About />
         <Capabilities />
+        <Features />
         <Security />
         <Pricing />
         <DownloadCTA />
