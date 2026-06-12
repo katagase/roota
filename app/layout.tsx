@@ -18,14 +18,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://roota.ktgs.llc"),
   title: "ROOTA｜組織の知識に、根を張るAI。完全クローズドの社内ナレッジAI",
   description:
-    "情報を外に出さない、中小企業のための社内ナレッジAI。Google製AIモデル「Gemma」採用。月額5万円・初期構築20万円から。探す・作る・守るを社内で完結。",
+    "情報を外に出さない、中小企業のための社内ナレッジAI。Googleが公開するオープンモデル「Gemma」を採用。月額5万円・初期構築20万円から。探す・作る・守るを社内で完結。",
   openGraph: {
     title: "ROOTA｜組織の知識に、根を張るAI。",
     description:
-      "情報を外に出さない、中小企業のための社内ナレッジAI。完全クローズド環境で、貴社の知識を安全に活用します。",
+      "情報を外に出さない、中小企業のための社内ナレッジAI。完全クローズドな環境で、貴社の知識を安全に活用します。",
+    url: "https://roota.ktgs.llc",
+    siteName: "ROOTA",
+    locale: "ja_JP",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ROOTA｜組織の知識に、根を張るAI。",
+    description:
+      "情報を外に出さない、中小企業のための社内ナレッジAI。完全クローズドな環境で、貴社の知識を安全に活用します。",
   },
 };
 
