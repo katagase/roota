@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { BackToTop } from "@/components/BackToTop";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
+import { Difference } from "@/components/sections/Difference";
 import { About } from "@/components/sections/About";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { Security } from "@/components/sections/Security";
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <Problem />
+        <Difference />
         <About />
         <Capabilities />
         <Security />

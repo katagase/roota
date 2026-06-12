@@ -99,7 +99,7 @@ export function Footer() {
             >
               Gemma Terms of Use
             </a>
-            . 「Gemma」「Google」は Google LLC の商標です。本サービスは Google による提供・承認・後援を受けたものではありません。
+. 「Gemma」「Google」は Google LLC の商標です。本サービスは Google による提供・承認・後援を受けたものではありません。記載の会社名・製品名は各社の商標または登録商標です。
           </p>
         </div>
       </div>
