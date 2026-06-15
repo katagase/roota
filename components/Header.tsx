@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
+import { CONTACT_URL } from "@/lib/site";
 
 const NAV = [
   { href: "/#problem", label: "課題" },
@@ -9,7 +10,7 @@ const NAV = [
   { href: "/#features", label: "できること" },
   { href: "/#security", label: "セキュリティ" },
   { href: "/#pricing", label: "料金" },
-  { href: "/#download", label: "資料請求" },
+  { href: CONTACT_URL, label: "資料請求", external: true },
 ];
 
 export function Header() {
@@ -34,16 +35,19 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
+              {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="text-sm font-medium text-navy-900/75 transition-colors hover:text-green-600"
             >
               {item.label}
             </a>
           ))}
           <a
-            href="/#download"
+            href={CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-green-600 px-6 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-green-500 hover:shadow-md"
           >
-            資料ダウンロード
+            資料請求・お問い合わせ
           </a>
         </nav>
 
@@ -85,6 +89,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
+              {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               onClick={() => setOpen(false)}
               className="border-b border-navy-900/5 py-3.5 text-sm font-medium text-navy-900/80"
             >
@@ -92,11 +97,13 @@ export function Header() {
             </a>
           ))}
           <a
-            href="/#download"
+            href={CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="my-3 rounded-full bg-green-600 px-5 py-3 text-center text-sm font-bold text-white"
           >
-            資料ダウンロード
+            資料請求・お問い合わせ
           </a>
         </nav>
       </div>

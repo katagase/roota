@@ -1,4 +1,5 @@
 import { IconArrowRight, IconShield } from "../icons";
+import { CONTACT_URL } from "@/lib/site";
 
 /**
  * Three-column photo hero (SEEED-style).
@@ -75,14 +76,18 @@ export function Hero() {
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="#download"
+            href={CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-green-600 px-9 py-4 text-base font-bold text-white shadow-lg shadow-black/20 transition-all hover:bg-green-500"
           >
-            資料ダウンロード（無料）
+            資料請求（無料）
             <IconArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </a>
           <a
-            href="#contact"
+            href={CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/5 px-9 py-4 text-base font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/15"
           >
             無料お試しの相談

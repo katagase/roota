@@ -8,7 +8,6 @@ import { Capabilities } from "@/components/sections/Capabilities";
 import { Features } from "@/components/sections/Features";
 import { Security } from "@/components/sections/Security";
 import { Pricing } from "@/components/sections/Pricing";
-import { DownloadCTA } from "@/components/sections/DownloadCTA";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 
@@ -30,7 +29,6 @@ export default function Home() {
         <Features />
         <Security />
         <Pricing />
-        <DownloadCTA />
         <FinalCTA />
       </main>
       <Footer />

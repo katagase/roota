@@ -1,6 +1,7 @@
 import { Reveal } from "../Reveal";
 import { LogoStacked } from "../Logo";
 import { IconArrowRight } from "../icons";
+import { CONTACT_URL } from "@/lib/site";
 
 export function FinalCTA() {
   return (
@@ -32,14 +33,18 @@ export function FinalCTA() {
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="#download"
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-9 py-4 text-base font-bold text-green-700 shadow-lg transition-all hover:bg-white/90"
             >
-              資料ダウンロード（無料）
+              資料請求（無料）
               <IconArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="mailto:office360@ktgs.llc?subject=ROOTA%20無料お試し・お問い合わせ"
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-white/50 px-9 py-4 text-base font-bold text-white transition-colors hover:bg-white/10"
             >
               無料お試し・お問い合わせ

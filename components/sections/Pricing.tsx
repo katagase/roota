@@ -1,6 +1,7 @@
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
 import { IconUsers, IconShield, IconServer, IconCheck } from "../icons";
+import { CONTACT_URL } from "@/lib/site";
 
 const PLANS = [
   {
@@ -95,7 +96,9 @@ export function Pricing() {
                 </ul>
 
                 <a
-                  href="#contact"
+                  href={CONTACT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-bold transition-colors ${
                     plan.recommended
                       ? "bg-green-600 text-white hover:bg-green-500"
@@ -111,7 +114,9 @@ export function Pricing() {
 
         <Reveal delay={200} className="mt-14 text-center">
           <a
-            href="#contact"
+            href={CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border-2 border-green-600 px-10 py-3.5 text-sm font-bold text-green-600 transition-colors hover:bg-green-600 hover:text-white"
           >
             まずは無料お試しで相談する

@@ -1,4 +1,5 @@
 import { LogoStacked } from "../Logo";
+import { CONTACT_URL } from "@/lib/site";
 
 const LINKS = [
   { href: "/#problem", label: "課題" },
@@ -6,8 +7,8 @@ const LINKS = [
   { href: "/#features", label: "できること" },
   { href: "/#security", label: "セキュリティ" },
   { href: "/#pricing", label: "料金プラン" },
-  { href: "/#download", label: "資料ダウンロード" },
-  { href: "/#contact", label: "お問い合わせ" },
+  { href: CONTACT_URL, label: "資料請求", external: true },
+  { href: CONTACT_URL, label: "お問い合わせ", external: true },
 ];
 
 const SOCIAL = [
@@ -62,8 +63,9 @@ export function Footer() {
         <nav className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           {LINKS.map((l) => (
             <a
-              key={l.href}
+              key={l.label}
               href={l.href}
+              {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="text-sm text-navy-900/60 transition-colors hover:text-green-600"
             >
               {l.label}
