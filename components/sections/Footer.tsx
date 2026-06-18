@@ -110,12 +110,7 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-5 text-xs text-navy-900/45 sm:flex-row sm:justify-between lg:px-8">
           <p>© {new Date().getFullYear()} ケーティージーエス合同会社（KTGS）</p>
           <div className="flex gap-6">
-            <a
-              href="https://ktgs.llc/privacy-policy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-navy-900/70"
-            >
+            <a href="/privacy" className="transition-colors hover:text-navy-900/70">
               プライバシーポリシー
             </a>
             <a href="/terms" className="transition-colors hover:text-navy-900/70">
