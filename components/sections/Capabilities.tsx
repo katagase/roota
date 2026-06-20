@@ -8,7 +8,7 @@ const CAPS = [
     n: "1",
     icon: IconSearch,
     tag: "探す",
-    variant: "navy" as const,
+    variant: "blue" as const,
     body: "散らばった規程・マニュアルを、聞くだけで即検索。出典付きで根拠まで確認できます。",
   },
   {

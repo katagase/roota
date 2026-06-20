@@ -1,11 +1,15 @@
 import type { SVGProps } from "react";
 
 type IconCmp = (p: SVGProps<SVGSVGElement>) => React.ReactElement;
-type Variant = "navy" | "green";
+export type IconVariant = "green" | "teal" | "navy" | "blue" | "slate" | "amber";
 
-const GRAD: Record<Variant, string> = {
-  navy: "from-navy-600 to-navy-900 shadow-navy-900/30",
+const GRAD: Record<IconVariant, string> = {
   green: "from-green-400 to-green-600 shadow-green-900/25",
+  teal: "from-teal-400 to-teal-600 shadow-teal-900/25",
+  navy: "from-navy-600 to-navy-900 shadow-navy-900/30",
+  blue: "from-sky-400 to-blue-600 shadow-blue-900/25",
+  slate: "from-slate-400 to-slate-600 shadow-slate-900/25",
+  amber: "from-amber-400 to-amber-600 shadow-amber-900/25",
 };
 
 /**
@@ -19,7 +23,7 @@ export function IconBadge({
   iconClassName = "h-7 w-7",
 }: {
   icon: IconCmp;
-  variant?: Variant;
+  variant?: IconVariant;
   className?: string;
   iconClassName?: string;
 }) {

@@ -6,21 +6,25 @@ import { IconArrowRight, IconClipboard, IconCheckBadge, IconLock, IconKey } from
 const ITEMS = [
   {
     icon: IconClipboard,
+    variant: "navy" as const,
     title: "「あの決まり、どこ?」",
     body: "出張申請のたび、社内資料を漁って探している",
   },
   {
     icon: IconCheckBadge,
+    variant: "amber" as const,
     title: "「これで合ってる?」",
     body: "メールや報告書、提出前に毎回ひとりで不安",
   },
   {
     icon: IconLock,
+    variant: "blue" as const,
     title: "外に出せない情報",
     body: "顧客情報や契約情報を、クラウドAIに預けられない",
   },
   {
     icon: IconKey,
+    variant: "slate" as const,
     title: "品質が人まかせ",
     body: "書類の出来は人によってバラバラ、ベテラン頼み",
   },
@@ -40,7 +44,7 @@ export function Problem() {
           {ITEMS.map((item, i) => (
             <Reveal key={item.title} delay={i * 90} as="article">
               <div className="group h-full rounded-2xl bg-white p-7 shadow-sm ring-1 ring-navy-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy-900/5">
-                <IconBadge icon={item.icon} variant="navy" />
+                <IconBadge icon={item.icon} variant={item.variant} />
                 <h3 className="mt-6 text-lg font-bold text-navy-900">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-navy-900/60">{item.body}</p>
               </div>

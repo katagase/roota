@@ -18,7 +18,7 @@ const PROMISES = [
   },
   {
     icon: IconEyeOff,
-    variant: "navy" as const,
+    variant: "blue" as const,
     title: "③ 会話本文は誰も覗かない",
     body: "管理者にも運営者にも、会話の中身を見る画面はありません。把握できるのは利用回数や利用量などの記録だけです。",
   },
