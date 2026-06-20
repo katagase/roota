@@ -7,6 +7,7 @@ import { About } from "@/components/sections/About";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { Accuracy } from "@/components/sections/Accuracy";
 import { Features } from "@/components/sections/Features";
+import { Agent } from "@/components/sections/Agent";
 import { Security } from "@/components/sections/Security";
 import { Pricing } from "@/components/sections/Pricing";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -29,6 +30,7 @@ export default function Home() {
         <Capabilities />
         <Accuracy />
         <Features />
+        <Agent />
         <Security />
         <Pricing />
         <FinalCTA />
