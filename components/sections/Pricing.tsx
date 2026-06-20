@@ -8,7 +8,7 @@ const PLANS = [
     icon: IconUsers,
     name: "共有タイプ",
     recommended: true,
-    initial: "20万円",
+    initial: "20万円～",
     price: "月額 5万円",
     sub: "～10名／追加 5,000円/名",
     features: ["初期費用をおさえて始められる", "構築・運用の手間は不要", "データは企業ごとに分離"],
@@ -17,7 +17,7 @@ const PLANS = [
     icon: IconShield,
     name: "占有タイプ",
     recommended: false,
-    initial: "250万円",
+    initial: "250万円～",
     price: "月額 5万円",
     sub: "～10名／追加 5,000円/名",
     features: ["御社専用の環境", "データもモデルも他社と完全分離", "より高い分離性を求める方へ"],
@@ -26,7 +26,7 @@ const PLANS = [
     icon: IconServer,
     name: "自社設置タイプ",
     recommended: false,
-    initial: "500万円",
+    initial: "500万円～",
     price: "保守 5万円/月",
     sub: "ユーザー数 50名",
     features: ["御社の施設内に設置", "すべて自社で管理できる", "全社・大規模での利用向け"],
@@ -121,6 +121,12 @@ export function Pricing() {
           >
             まずは無料お試しで相談する
           </a>
+        </Reveal>
+
+        <Reveal delay={250}>
+          <p className="mt-8 text-center text-xs leading-relaxed text-navy-900/45">
+            ※ 価格はいずれも税別・最低価格です。GPU/LLMサーバーの市況により、構成・初期費用は変動します。正確な金額はお見積りにてご案内します。
+          </p>
         </Reveal>
       </div>
     </section>
