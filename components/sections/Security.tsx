@@ -50,14 +50,7 @@ export function Security() {
         </div>
         <Reveal delay={150}>
           <p className="mt-10 text-center text-base font-bold text-green-600">
-            ご希望に応じて、御社のサーバー内だけで運用することも可能。すべて社内で完結します。
-          </p>
-        </Reveal>
-
-        <Reveal delay={200}>
-          <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-navy-900/45">
-            ※ 招待・通知メールの送信のため、ユーザーのメールアドレス等が外部サービス（Microsoft
-            365）を経由する場合があります。社内文書・会話・音声などの登録データが外部のAIサービスへ送信されることはありません。
+            通知メールも含め、外部への送信はありません。すべて御社の環境内で完結します。
           </p>
         </Reveal>
       </div>
