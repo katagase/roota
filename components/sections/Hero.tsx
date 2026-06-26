@@ -69,9 +69,9 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-          情報を外に出さない。Googleが公開するオープンモデル「Gemma」を採用。
+          社内の規程・マニュアル・FAQを、聞くだけで引き出せる。
           <br className="hidden sm:block" />
-          中小企業のための、完全クローズドな社内ナレッジAIです。
+          情報を外に出さない、中小企業のための完全クローズドな社内ナレッジAIです。
         </p>
 
         <p className="mx-auto mt-4 max-w-2xl text-base font-bold text-green-300 sm:text-lg">

@@ -2,16 +2,11 @@ import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
 import { IconCheck } from "../icons";
 
-const GENERAL = [
-  "インターネット上の膨大な一般知識",
-  "誰でも調べられる公開情報",
-  "御社の社内規程・契約書・FAQは知らない",
-];
-const ROOTA = [
-  "社内規程・マニュアル・手順書",
-  "FAQ・議事録・過去案件資料",
-  "契約関連文書（閉域で安全に）",
-  "対話形式で、必要な時に引き出せる",
+const KNOWLEDGE = [
+  { title: "社内規程・マニュアル・手順書", desc: "「どこに書いてある?」を、その場で。" },
+  { title: "FAQ・議事録・過去案件資料", desc: "現場とベテランの知見を蓄積。" },
+  { title: "契約関連文書", desc: "閉域で、安全に取り込み。" },
+  { title: "対話で、必要なときに引き出せる", desc: "覚えさせて、あとは聞くだけ。" },
 ];
 
 export function About() {
@@ -27,7 +22,7 @@ export function About() {
               ROOTAは、<span className="text-green-600">覚えている。</span>
             </>
           }
-          description="一般的なAIは世の中の知識に答えます。ROOTAが答えるのは、御社の知識。Googleが公開するオープンAIモデル「Gemma」を、情報を外に出さず社内で動かします。"
+          description="一般的なAIは世の中の知識に答えます。ROOTAが答えるのは、御社の知識。規程・マニュアル・過去案件まで覚えさせて、必要なときに引き出せます。"
         />
 
         <Reveal className="mt-7 flex justify-center">
@@ -44,42 +39,40 @@ export function About() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
-          <Reveal>
-            <div className="h-full rounded-2xl border border-navy-900/8 bg-mist p-8">
-              <h3 className="text-lg font-bold text-navy-900/70">一般的なAIが持つ知識</h3>
-              <ul className="mt-6 space-y-4">
-                {GENERAL.map((g, i) => (
-                  <li key={g} className="flex gap-3 text-sm text-navy-900/65">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-navy-900/30" />
-                    <span className={i === GENERAL.length - 1 ? "text-red-400" : ""}>{g}</span>
-                  </li>
-                ))}
-              </ul>
+        {/* ROOTAが覚える御社の知識（ポジティブに提示。比較表は差別化セクションに集約） */}
+        <Reveal delay={120}>
+          <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-green-600/15 bg-mist p-7 sm:p-9">
+            <p className="text-center text-sm font-bold tracking-wide text-green-700">
+              ROOTAが“覚える”、御社の知識
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+              {KNOWLEDGE.map((k) => (
+                <div
+                  key={k.title}
+                  className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-navy-900/5"
+                >
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
+                    <IconCheck className="h-3.5 w-3.5" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-bold text-navy-900">{k.title}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-navy-900/55">{k.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="h-full rounded-2xl bg-green-600 p-8 shadow-xl shadow-green-900/20">
-              <h3 className="text-lg font-bold text-white">ROOTAが蓄積する知識</h3>
-              <ul className="mt-6 space-y-4">
-                {ROOTA.map((r) => (
-                  <li key={r} className="flex gap-3 text-sm text-white/95">
-                    <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-white" />
-                    <span>{r}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
 
         <Reveal delay={150}>
           <div className="mt-8 rounded-2xl border border-green-600/20 bg-green-500/8 p-8 text-center">
             <p className="text-xl font-black text-navy-900 sm:text-2xl">
-              つまり ROOTA は、<span className="text-green-600">閉域で動かせる Google のオープンモデル「Gemma」</span>を採用。
+              つまり ROOTA は、
+              <span className="text-green-600">閉域で動かせる Google のオープンモデル「Gemma」</span>
+              を採用。
             </p>
             <p className="mt-3 text-sm text-navy-900/65 sm:text-base">
-              情報を外に出さないという御社の要件を満たしたまま、Googleが公開する技術を活用できます。
+              情報を外に出さないまま、Googleが公開する技術を活用できます。
             </p>
           </div>
         </Reveal>
