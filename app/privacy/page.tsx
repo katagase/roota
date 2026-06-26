@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <PageShell eyebrow="Privacy Policy" title="個人情報の取扱い（プライバシーポリシー）" updated="制定日：2026年6月18日　最終改定日：2026年6月18日">
+    <PageShell eyebrow="Privacy Policy" title="個人情報の取扱い（プライバシーポリシー）" updated="制定日：2026年6月18日　最終改定日：2026年6月26日">
       <Prose>
         <p>
           本ページは、ケーティージーエス合同会社（以下「当社」といいます）が、社内ナレッジAI「ROOTA」（以下「本サービス」といいます）の提供にあたって取り扱う個人情報の取扱方針を定めるものです。本方針は、本サービスの
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
           <li>本サービスの提供・本人認証・アカウント管理</li>
           <li>利用者サポート・お問い合わせ対応</li>
           <li>本サービスの保守・改善および不正利用の防止</li>
-          <li>招待・パスワード再設定・重要なお知らせ等の各種通知</li>
+          <li>重要なお知らせ等のご連絡（ユーザーの招待・パスワードの通知は、システムからの自動メールによらず管理者を通じて行います）</li>
           <li>料金請求・契約管理</li>
           <li>法令に基づく対応</li>
         </ul>
@@ -73,7 +73,10 @@ export default function PrivacyPage() {
             本サービスが用いる採用AIモデル（文章生成・画像理解：Gemma／音声認識・文字起こし：Whisper／文章埋め込み：Ruri）は、いずれも当社が管理する環境内で動作します。
           </li>
           <li>
-            本サービスの提供に伴う外部送信は、招待・パスワード再設定・各種通知メールの送信のための Microsoft 365 / Microsoft Graph へのメールアドレス等の送信に限られ、登録データ本文・会話・音声は含まれません。
+            本サービスは、ユーザーの招待・通知・パスワード再設定等を含め、外部の電子メール送信サービスその他の外部サービスへデータを送信しません。
+          </li>
+          <li>
+            本サービスにおいて「クローズド（完全クローズド）」とは、登録データ（社内文書・チャット・音声）を含むあらゆるデータを外部に送信せず、当社が管理する環境内で処理することを指します。
           </li>
         </ul>
 
@@ -93,9 +96,6 @@ export default function PrivacyPage() {
         </p>
         <ul>
           <li>株式会社ノウデル：本サービスの開発・保守</li>
-          <li>
-            Microsoft 365 / Microsoft Graph（Microsoft Corporation）：招待・パスワード再設定・通知メールの送信
-          </li>
         </ul>
 
         <h2>第8条（個人情報の保存場所）</h2>
