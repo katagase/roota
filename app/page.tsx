@@ -8,7 +8,7 @@ import { Capabilities } from "@/components/sections/Capabilities";
 import { Accuracy } from "@/components/sections/Accuracy";
 import { Features } from "@/components/sections/Features";
 import { Agent } from "@/components/sections/Agent";
-import { IndustryUseCases } from "@/components/sections/IndustryUseCases";
+import { UseCases } from "@/components/sections/UseCases";
 import { Security } from "@/components/sections/Security";
 import { Pricing } from "@/components/sections/Pricing";
 import { Faq } from "@/components/sections/Faq";
@@ -33,7 +33,7 @@ export default function Home() {
         <Accuracy />
         <Features />
         <Agent />
-        <IndustryUseCases />
+        <UseCases />
         <Security />
         <Pricing />
         <Faq />
