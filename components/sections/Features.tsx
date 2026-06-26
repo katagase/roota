@@ -35,7 +35,7 @@ const FEATURES: Feature[] = [
   { icon: IconClipboard, variant: "teal", title: "利用状況の把握", body: "件数・利用量などの記録を確認（会話の中身は非公開）。" },
   { icon: IconLock, variant: "navy", title: "完全クローズド運用", body: "外部送信ゼロ。御社の環境・国内の閉域で完結。" },
   { icon: IconMic, variant: "green", title: "議事録自動作成", body: "会議音声から、要点・決定事項を自動で議事録化。", soon: true },
-  { icon: IconRobot, variant: "amber", title: "AIエージェント", body: "御社の業務に合わせて個別開発（無料）。テンプレートからもすぐ作成。" },
+  { icon: IconRobot, variant: "amber", title: "AIエージェント", body: "テンプレートから自分で作成（無料）。専用設計の個別開発は初回無料・以降1個30,000円。" },
   { icon: IconPhone, variant: "blue", title: "iPhone / Android アプリ", body: "専用アプリで外出先でも。（現在もモバイルWeb対応）", soon: true },
 ];
 

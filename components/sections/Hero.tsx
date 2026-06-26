@@ -75,7 +75,7 @@ export function Hero() {
         </p>
 
         <p className="mx-auto mt-4 max-w-2xl text-base font-bold text-green-300 sm:text-lg">
-          御社専用のAIエージェントも、無料で個別開発します。
+          御社専用のAIエージェントも、最初の1つは無料で個別開発します。
         </p>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">

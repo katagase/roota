@@ -2,9 +2,9 @@ import { Reveal } from "../Reveal";
 import { IconCheck } from "../icons";
 
 const POINTS = [
-  "御社専用に個別開発（無料）",
+  "作り方はレクチャー。テンプレートから、ご自身で何個でも作成できます（無料）",
+  "専用エージェントの個別開発：最初の1つは無料／2つ目以降は1個 30,000円（税別）",
   "業務ヒアリングから運用まで、伴走して改善",
-  "メール／議事録／稟議／提案・見積／問い合わせ対応など、テンプレートも多数",
 ];
 
 export function Agent() {
@@ -26,10 +26,10 @@ export function Agent() {
 
             <div className="mt-7 rounded-2xl border border-green-600/20 bg-green-500/8 p-6">
               <p className="text-lg font-black text-navy-900">
-                個別開発は、<span className="text-green-600">無料。</span>
+                最初の1つは、<span className="text-green-600">無料。</span>
               </p>
               <p className="mt-2 text-sm leading-relaxed text-navy-900/70">
-                御社の業務を伺い、運用に伴走しながら、現場で本当に効くエージェントに育てます。
+                御社の業務に合わせた専用エージェントを、まず1つ私たちが個別開発。運用に伴走しながら現場で効くまで育てます。2つ目以降は1個 30,000円（税別）でご依頼いただけます。
               </p>
             </div>
 
