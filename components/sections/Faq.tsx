@@ -59,7 +59,12 @@ function FaqItem({ q, a }: { q: string; a: string }) {
     <div className="overflow-hidden rounded-2xl border border-navy-900/8 bg-mist">
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() =>
+          setOpen((v) => {
+            if (!v) window.gtag?.("event", "faq_open", { faq_question: q });
+            return !v;
+          })
+        }
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
       >

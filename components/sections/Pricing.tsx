@@ -1,5 +1,6 @@
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
+import { ViewTracker } from "../ViewTracker";
 import { IconUsers, IconShield, IconServer, IconCheck } from "../icons";
 import { CONTACT_URL } from "@/lib/site";
 
@@ -36,6 +37,7 @@ const PLANS = [
 export function Pricing() {
   return (
     <section id="pricing" className="bg-mist py-24 sm:py-28">
+      <ViewTracker eventName="view_pricing" />
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="料金プラン"
