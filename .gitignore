@@ -20,3 +20,6 @@ next-env.d.ts
 /*.pptx
 /AI*.png
 /.claude/
+
+# Local HTML mockups
+/*.html

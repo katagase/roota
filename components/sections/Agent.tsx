@@ -1,4 +1,4 @@
-import { ClipboardCheck, FileSearch, Headset } from "lucide-react";
+import { ClipboardCheck, FileCheck2, BarChart3, FileSpreadsheet } from "lucide-react";
 import { Reveal } from "../Reveal";
 import { IconCheck } from "../icons";
 
@@ -12,20 +12,26 @@ const USE_CASES = [
   {
     icon: ClipboardCheck,
     title: "ISMS・セキュリティチェック回答",
-    body: "自社のISMS対応状況とSaaS仕様書を学習。顧客から届くチェックシートを入れるだけで回答ドラフトを作成。「営業が受けて、エンジニアが書く」をそのまま自動化します。",
+    body: "ISMS対応状況とSaaSの仕様書を学習。先方のチェックシートを入れれば、回答ドラフトを自動生成。「営業が受けて、エンジニアが書く」の往復を圧縮します。",
     effect: "エンジニアの回答工数を削減",
   },
   {
-    icon: FileSearch,
-    title: "契約レビューの前さばき",
-    body: "自社の過去契約・社内規程・チェック観点を学習し、顧問弁護士のチェック前に確認ポイントを整理。法的な判断はせず、弁護士レビューの“前さばき”として使います。",
-    effect: "弁護士レビュー前の論点整理を効率化",
+    icon: FileCheck2,
+    title: "法務の事前チェック（前さばき）",
+    body: "自社の過去契約・社内規程・チェック観点を学習し、弁護士のリーガルチェック前に論点を洗い出し。最終判断は弁護士に残しつつ、確認すべき箇所を先に整理します。",
+    effect: "弁護士との確認の往復を効率化",
   },
   {
-    icon: Headset,
+    icon: BarChart3,
     title: "コールセンターのレポート自動化",
-    body: "PBXの通話明細を社内で取り込み、クライアント別のKPIレポートを自動作成。毎月の集計・作成業務を自動化します。",
+    body: "PBXの通話明細を社内で取り込み、クライアント別のKPIレポートを自動作成。データは外に出さず、社内で完結させる構成です。",
     effect: "SVのレポート作成工数を削減",
+  },
+  {
+    icon: FileSpreadsheet,
+    title: "税務・経理の照合（消込み・前さばき）",
+    body: "補助元帳・賃金台帳・振込明細を社内で取り込み、月次で計上と支払を突合。残高の内訳（未払い・端数・繰越）まで自動で分解し、税理士チェック前に整理します。計算は決定的なロジックで処理し、判断は税理士に残します。",
+    effect: "税理士との確認・往復の工数を削減",
   },
 ];
 
@@ -92,52 +98,46 @@ export function Agent() {
         </div>
 
         {/* use cases — 個別開発の活用例 */}
-        <div className="mt-20 sm:mt-24">
+        <div className="mx-auto mt-20 max-w-5xl sm:mt-24">
           <Reveal>
-            <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600">
-                Use cases
-              </p>
-              <h3 className="mt-3 text-2xl font-black tracking-[0.01em] text-navy-900 sm:text-3xl">
-                個別開発の、<span className="text-green-600">活用例。</span>
-              </h3>
-              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-navy-900/60">
-                御社の業務に合わせて、ここまで踏み込んだエージェントも開発できます。
-                <br className="hidden sm:block" />
-                実際に効果が出ている活用例の一部です。
-              </p>
-            </div>
+            <span className="inline-block rounded-full bg-roota-green-tint px-3.5 py-1.5 text-[13px] font-bold tracking-wide text-roota-green-strong">
+              個別開発の活用例
+            </span>
+            <h3 className="mt-3.5 text-2xl font-black leading-[1.35] tracking-[0.01em] text-navy-900 sm:text-[1.75rem]">
+              テンプレで手軽に。<span className="text-green-600">個別開発でここまで。</span>
+            </h3>
+            <p className="mt-4 max-w-2xl text-[15px] leading-[1.9] text-navy-900/60">
+              汎用テンプレート（たたき台作成・チェック・議事録）に加えて、業務に合わせて作り込むと、「人がやると重い前さばき」をエージェントに任せられます。
+              <span className="font-bold text-navy-900/80">判断は人が、下ごしらえはAIが。</span>
+            </p>
           </Reveal>
 
-          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {USE_CASES.map((u, i) => (
-              <Reveal key={u.title} delay={i * 100}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-xl border-[0.5px] border-roota-border bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5">
-                  <div className="h-1 bg-roota-green" />
-                  <div className="flex h-full flex-col p-5">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-roota-green-tint">
-                      <u.icon className="h-6 w-6 text-roota-green-strong" strokeWidth={1.75} />
-                    </div>
-                    <h4 className="mt-3.5 text-[15px] font-semibold text-roota-navy">{u.title}</h4>
-                    <p className="mt-1.5 flex-1 text-[13px] leading-relaxed text-roota-body">
-                      {u.body}
-                    </p>
-                    <div className="mt-4 flex items-start gap-2 rounded-lg bg-roota-green-tint px-3 py-2.5">
-                      <span className="shrink-0 rounded bg-roota-green px-1.5 py-0.5 text-[10px] font-bold text-white">
-                        効果
-                      </span>
-                      <span className="text-[12px] font-semibold leading-snug text-roota-green-strong">
-                        {u.effect}
-                      </span>
-                    </div>
+              <Reveal key={u.title} delay={(i % 2) * 100}>
+                <article className="group flex h-full flex-col rounded-2xl border-[0.5px] border-roota-border bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-roota-green">
+                    <u.icon className="h-6 w-6 text-white" strokeWidth={1.75} />
+                  </div>
+                  <h4 className="mt-4 text-[16px] font-bold leading-relaxed text-roota-navy">
+                    {u.title}
+                  </h4>
+                  <p className="mt-2 flex-1 text-[13px] leading-[1.85] text-roota-body">{u.body}</p>
+                  <div className="mt-5 flex items-center gap-2.5 border-t border-dashed border-roota-border pt-4">
+                    <span className="shrink-0 rounded bg-roota-green px-2 py-1 text-[11px] font-bold tracking-wide text-white">
+                      効果
+                    </span>
+                    <span className="text-[13px] font-semibold leading-snug text-roota-navy">
+                      {u.effect}
+                    </span>
                   </div>
                 </article>
               </Reveal>
             ))}
           </div>
 
-          <p className="mt-6 text-center text-xs text-navy-900/40">
-            ※ 活用例です。効果は業務内容・データの整備状況により異なります。
+          <p className="mt-6 text-xs leading-relaxed text-navy-900/40">
+            ※ 効果は業務内容・データ整備状況により異なります。記載は導入時の想定であり、成果を保証するものではありません。
           </p>
         </div>
       </div>
