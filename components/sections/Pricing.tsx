@@ -18,7 +18,7 @@ const PLANS = [
     name: "占有タイプ",
     recommended: false,
     initial: "250万円～",
-    price: "月額 5万円",
+    price: "月額 10万円",
     sub: "～10名／追加 5,000円/名",
     features: ["御社専用の環境", "データもモデルも他社と完全分離", "より高い分離性を求める方へ"],
   },
