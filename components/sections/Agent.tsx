@@ -1,3 +1,4 @@
+import { ClipboardCheck, Scale, Headset } from "lucide-react";
 import { Reveal } from "../Reveal";
 import { IconCheck } from "../icons";
 
@@ -5,6 +6,27 @@ const POINTS = [
   "作り方はレクチャー。テンプレートから、ご自身で何個でも作成できます（無料）",
   "専用エージェントの個別開発：最初の1つは無料／2つ目以降は1個 30,000円（税別）",
   "業務ヒアリングから運用まで、伴走して改善",
+];
+
+const USE_CASES = [
+  {
+    icon: ClipboardCheck,
+    title: "ISMS・セキュリティチェック回答",
+    body: "自社のISMS対応状況とSaaS仕様書を学習。顧客から届くチェックシートを入れるだけで回答ドラフトを作成。「営業が受けて、エンジニアが書く」をそのまま自動化します。",
+    effect: "エンジニアの回答工数を大幅に削減",
+  },
+  {
+    icon: Scale,
+    title: "法務の事前チェック",
+    body: "六法・社内規程を学習し、顧問弁護士のリーガルチェック前に論点を洗い出し。指摘されやすいポイントを先回りで整理します。",
+    effect: "弁護士費用と、やり取りの往復時間を圧縮",
+  },
+  {
+    icon: Headset,
+    title: "コールセンターのレポート自動化",
+    body: "PBXの通話明細を社内で取り込み、クライアント別のKPIレポートを自動作成。毎月の集計・作成業務を自動化します。",
+    effect: "SVのレポート作成工数を削減",
+  },
 ];
 
 export function Agent() {
@@ -67,6 +89,56 @@ export function Agent() {
               ※ 画面はイメージです。テンプレートは順次追加されます。
             </p>
           </Reveal>
+        </div>
+
+        {/* use cases — 個別開発の活用例 */}
+        <div className="mt-20 sm:mt-24">
+          <Reveal>
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600">
+                Use cases
+              </p>
+              <h3 className="mt-3 text-2xl font-black tracking-[0.01em] text-navy-900 sm:text-3xl">
+                個別開発の、<span className="text-green-600">活用例。</span>
+              </h3>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-navy-900/60">
+                御社の業務に合わせて、ここまで踏み込んだエージェントも開発できます。
+                <br className="hidden sm:block" />
+                実際に効果が出ている活用例の一部です。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {USE_CASES.map((u, i) => (
+              <Reveal key={u.title} delay={i * 100}>
+                <article className="group flex h-full flex-col overflow-hidden rounded-xl border-[0.5px] border-roota-border bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5">
+                  <div className="h-1 bg-roota-green" />
+                  <div className="flex h-full flex-col p-5">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-roota-green-tint">
+                      <u.icon className="h-6 w-6 text-roota-green-strong" strokeWidth={1.75} />
+                    </div>
+                    <h4 className="mt-3.5 text-[15px] font-semibold text-roota-navy">{u.title}</h4>
+                    <p className="mt-1.5 flex-1 text-[13px] leading-relaxed text-roota-body">
+                      {u.body}
+                    </p>
+                    <div className="mt-4 flex items-start gap-2 rounded-lg bg-roota-green-tint px-3 py-2.5">
+                      <span className="shrink-0 rounded bg-roota-green px-1.5 py-0.5 text-[10px] font-bold text-white">
+                        効果
+                      </span>
+                      <span className="text-[12px] font-semibold leading-snug text-roota-green-strong">
+                        {u.effect}
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <p className="mt-6 text-center text-xs text-navy-900/40">
+            ※ 活用例です。効果は業務内容・データの整備状況により異なります。
+          </p>
         </div>
       </div>
     </section>
