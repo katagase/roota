@@ -1,30 +1,26 @@
+import { ArrowRight, FileSearch, ListChecks, Lock, ScanSearch } from "lucide-react";
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
-import { IconBadge } from "../IconBadge";
-import { IconArrowRight, IconClipboard, IconCheckBadge, IconLock, IconKey } from "../icons";
+import { RootaCard } from "../RootaCard";
 
 const ITEMS = [
   {
-    icon: IconClipboard,
-    variant: "navy" as const,
+    icon: FileSearch,
     title: "「あの決まり、どこ?」",
     body: "出張申請のたび、社内資料を漁って探している",
   },
   {
-    icon: IconCheckBadge,
-    variant: "amber" as const,
+    icon: ListChecks,
     title: "「これで合ってる?」",
     body: "メールや報告書、提出前に毎回ひとりで不安",
   },
   {
-    icon: IconLock,
-    variant: "blue" as const,
+    icon: Lock,
     title: "外に出せない情報",
     body: "顧客情報や契約情報を、クラウドAIに預けられない",
   },
   {
-    icon: IconKey,
-    variant: "slate" as const,
+    icon: ScanSearch,
     title: "品質が人まかせ",
     body: "書類の出来は人によってバラバラ、ベテラン頼み",
   },
@@ -42,19 +38,15 @@ export function Problem() {
 
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {ITEMS.map((item, i) => (
-            <Reveal key={item.title} delay={i * 90} as="article">
-              <div className="group h-full rounded-2xl bg-white p-7 shadow-sm ring-1 ring-navy-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy-900/5">
-                <IconBadge icon={item.icon} variant={item.variant} />
-                <h3 className="mt-6 text-lg font-bold text-navy-900">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-navy-900/60">{item.body}</p>
-              </div>
+            <Reveal key={item.title} delay={i * 90}>
+              <RootaCard variant="problem" icon={item.icon} title={item.title} desc={item.body} />
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={200}>
           <div className="mt-12 flex items-start gap-3 rounded-2xl border border-green-600/20 bg-green-500/5 p-6 text-navy-900">
-            <IconArrowRight className="mt-0.5 h-6 w-6 shrink-0 text-green-600" />
+            <ArrowRight className="mt-0.5 h-6 w-6 shrink-0 text-green-600" strokeWidth={1.75} />
             <p className="text-base font-bold sm:text-lg">
               「探す・作る・守る」を、情報を外に出さず、社内で完結して解決します。
             </p>

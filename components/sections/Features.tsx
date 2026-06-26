@@ -1,42 +1,37 @@
+import type { LucideIcon } from "lucide-react";
+import {
+  Search,
+  MessageCircle,
+  Database,
+  ListChecks,
+  Pencil,
+  Users,
+  KeyRound,
+  BarChart3,
+  Lock,
+  Mic,
+  Bot,
+  Smartphone,
+} from "lucide-react";
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
-import { IconBadge, type IconVariant } from "../IconBadge";
-import {
-  IconSearch,
-  IconBrain,
-  IconDatabase,
-  IconCheckBadge,
-  IconPen,
-  IconUsers,
-  IconKey,
-  IconClipboard,
-  IconLock,
-  IconMic,
-  IconRobot,
-  IconPhone,
-} from "../icons";
+import { RootaCard } from "../RootaCard";
 
-type Feature = {
-  icon: typeof IconSearch;
-  variant: IconVariant;
-  title: string;
-  body: string;
-  soon?: boolean;
-};
+type Feature = { icon: LucideIcon; title: string; body: string; soon?: boolean };
 
 const FEATURES: Feature[] = [
-  { icon: IconSearch, variant: "blue", title: "ナレッジ検索（出典つき）", body: "規程・マニュアル・FAQを、聞くだけで出典つきで回答。" },
-  { icon: IconBrain, variant: "teal", title: "対話で質問", body: "知りたいことを聞くだけ。社内の知識から答えます。" },
-  { icon: IconDatabase, variant: "navy", title: "文書の登録・管理", body: "規程・議事録・契約文書などをまとめて管理。" },
-  { icon: IconCheckBadge, variant: "green", title: "書類・メールのチェック", body: "提出前に自社ルールで点検。記入漏れ・ミスを防止。" },
-  { icon: IconPen, variant: "amber", title: "たたき台の自動作成", body: "報告書・メールの下書きを自動で作成。" },
-  { icon: IconUsers, variant: "slate", title: "会社・部門ごとに分離", body: "データを構造的に分離。他社の文書は混ざりません。" },
-  { icon: IconKey, variant: "blue", title: "権限・ユーザー管理", body: "利用者と権限を柔軟に設定できます。" },
-  { icon: IconClipboard, variant: "teal", title: "利用状況の把握", body: "件数・利用量などの記録を確認（会話の中身は非公開）。" },
-  { icon: IconLock, variant: "navy", title: "完全クローズド運用", body: "外部送信ゼロ。御社の環境・国内の閉域で完結。" },
-  { icon: IconMic, variant: "green", title: "議事録自動作成", body: "会議音声から、要点・決定事項を自動で議事録化。", soon: true },
-  { icon: IconRobot, variant: "amber", title: "AIエージェント", body: "テンプレートから自分で作成（無料）。専用設計の個別開発は初回無料・以降1個30,000円。" },
-  { icon: IconPhone, variant: "blue", title: "iPhone / Android アプリ", body: "専用アプリで外出先でも。（現在もモバイルWeb対応）", soon: true },
+  { icon: Search, title: "ナレッジ検索（出典つき）", body: "規程・マニュアル・FAQを、聞くだけで出典つきで回答。" },
+  { icon: MessageCircle, title: "対話で質問", body: "知りたいことを聞くだけ。社内の知識から答えます。" },
+  { icon: Database, title: "文書の登録・管理", body: "規程・議事録・契約文書などをまとめて管理。" },
+  { icon: ListChecks, title: "書類・メールのチェック", body: "提出前に自社ルールで点検。記入漏れ・ミスを防止。" },
+  { icon: Pencil, title: "たたき台の自動作成", body: "報告書・メールの下書きを自動で作成。" },
+  { icon: Users, title: "会社・部門ごとに分離", body: "データを構造的に分離。他社の文書は混ざりません。" },
+  { icon: KeyRound, title: "権限・ユーザー管理", body: "利用者と権限を柔軟に設定できます。" },
+  { icon: BarChart3, title: "利用状況の把握", body: "件数・利用量などの記録を確認（会話の中身は非公開）。" },
+  { icon: Lock, title: "完全クローズド運用", body: "外部送信ゼロ。御社の環境・国内の閉域で完結。" },
+  { icon: Mic, title: "議事録自動作成", body: "会議音声から、要点・決定事項を自動で議事録化。", soon: true },
+  { icon: Bot, title: "AIエージェント", body: "テンプレートから自分で作成（無料）。専用設計の個別開発は初回無料・以降1個30,000円。" },
+  { icon: Smartphone, title: "iPhone / Android アプリ", body: "専用アプリで外出先でも。（現在もモバイルWeb対応）", soon: true },
 ];
 
 export function Features() {
@@ -51,17 +46,13 @@ export function Features() {
 
         <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {FEATURES.map((f, i) => (
-            <Reveal key={f.title} delay={(i % 4) * 70} as="article">
-              <div className="group relative h-full rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                {f.soon && (
-                  <span className="absolute right-4 top-4 rounded-md bg-amber-600 px-2.5 py-0.5 text-[10px] font-bold text-white">
-                    開発予定
-                  </span>
-                )}
-                <IconBadge icon={f.icon} variant={f.variant} className="h-14 w-14" iconClassName="h-7 w-7" />
-                <h3 className="mt-5 text-base font-bold text-navy-900">{f.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-navy-900/60">{f.body}</p>
-              </div>
+            <Reveal key={f.title} delay={(i % 4) * 70}>
+              <RootaCard
+                icon={f.icon}
+                title={f.title}
+                desc={f.body}
+                badge={f.soon ? "開発予定" : undefined}
+              />
             </Reveal>
           ))}
         </div>

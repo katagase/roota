@@ -15,6 +15,18 @@
   --color-ink: #0f1f3d;
   --color-mist: #f4f6fb;
 
+  /* Icon / card system (ROOTA_LP_icon_card_spec) — 色=意味の統一 */
+  --color-roota-green: #2e9e6b;
+  --color-roota-green-strong: #1f7a50;
+  --color-roota-green-tint: #e8f4ee;
+  --color-roota-navy: #16223d;
+  --color-roota-navy-tint: #eaedf4;
+  --color-roota-body: #5b6577;
+  --color-roota-border: #e3e8ef;
+  --color-roota-page: #f4f7fa;
+  --color-roota-warning: #f4a23b;
+  --color-roota-warning-text: #5a3508;
+
   /* Inter first → Latin/numerals use Inter; Japanese falls through to Noto. */
   --font-sans: var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN",
     "Yu Gothic", Meiryo, ui-sans-serif, system-ui, sans-serif;

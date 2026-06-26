@@ -1,24 +1,21 @@
+import { Database, ListChecks, Quote } from "lucide-react";
 import { Reveal } from "../Reveal";
 import { SectionHeading } from "../SectionHeading";
-import { IconBadge } from "../IconBadge";
-import { IconDatabase, IconCheckBadge, IconQuote } from "../icons";
+import { RootaCard } from "../RootaCard";
 
 const POINTS = [
   {
-    icon: IconDatabase,
-    variant: "navy" as const,
+    icon: Database,
     title: "正解を、覚えさせる",
     body: "社内規程・マニュアル・確定済みの情報を登録。御社の“正”が、答えの土台になります。",
   },
   {
-    icon: IconCheckBadge,
-    variant: "green" as const,
+    icon: ListChecks,
     title: "正解を、根拠に答える",
     body: "一般論で推測しません。御社の情報だけを根拠に、回答を組み立てます。",
   },
   {
-    icon: IconQuote,
-    variant: "blue" as const,
+    icon: Quote,
     title: "出典で、確かめられる",
     body: "参照元を提示。AIの“言いっぱなし”を防ぎ、誤りにすぐ気づけます。",
   },
@@ -42,12 +39,8 @@ export function Accuracy() {
 
         <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3">
           {POINTS.map((p, i) => (
-            <Reveal key={p.title} delay={i * 100} as="article">
-              <div className="h-full rounded-2xl border border-navy-900/8 bg-mist p-8">
-                <IconBadge icon={p.icon} variant={p.variant} />
-                <h3 className="mt-6 text-lg font-bold text-navy-900">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-navy-900/60">{p.body}</p>
-              </div>
+            <Reveal key={p.title} delay={i * 100}>
+              <RootaCard icon={p.icon} title={p.title} desc={p.body} />
             </Reveal>
           ))}
         </div>

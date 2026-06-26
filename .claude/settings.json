@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000/terms)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m ' *)",
+      "Bash(git push *)",
+      "Bash(curl -s -o /dev/null -w \"page %{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000)"
+    ]
+  }
+}
