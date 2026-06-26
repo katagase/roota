@@ -57,7 +57,11 @@ export function Prose({ children }: { children: React.ReactNode }) {
         [&_a]:font-medium [&_a]:text-green-600 [&_a]:underline
         [&_dl]:mt-2 [&_dl]:divide-y [&_dl]:divide-navy-900/8 [&_dl]:overflow-hidden [&_dl]:rounded-2xl [&_dl]:border [&_dl]:border-navy-900/8
         [&_dt]:bg-mist [&_dt]:px-5 [&_dt]:py-4 [&_dt]:text-sm [&_dt]:font-bold [&_dt]:text-navy-900
-        [&_dd]:px-5 [&_dd]:py-4 [&_dd]:text-sm [&_dd]:text-navy-900/75"
+        [&_dd]:px-5 [&_dd]:py-4 [&_dd]:text-sm [&_dd]:text-navy-900/75
+        [&_table]:my-5 [&_table]:w-full [&_table]:border-collapse [&_table]:overflow-hidden [&_table]:rounded-xl [&_table]:text-sm
+        [&_thead]:bg-mist
+        [&_th]:border [&_th]:border-navy-900/10 [&_th]:px-4 [&_th]:py-2.5 [&_th]:text-left [&_th]:font-bold [&_th]:text-navy-900
+        [&_td]:border [&_td]:border-navy-900/10 [&_td]:px-4 [&_td]:py-2.5 [&_td]:align-top [&_td]:text-navy-900/75"
     >
       {children}
     </div>
