@@ -42,18 +42,20 @@ export function Capabilities() {
             <Reveal key={cap.tag} delay={i * 110}>
               <article className="group h-full overflow-hidden rounded-xl border-[0.5px] border-roota-border bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5">
                 <div className="h-1 bg-roota-green" />
-                <div className="p-7">
-                  <span className="flex h-12 w-12 flex-col items-center justify-center rounded-full bg-roota-navy-tint leading-none">
-                    <span className="text-[8px] font-bold tracking-wider text-roota-navy/60">
-                      POINT
+                <div className="p-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-roota-green-tint">
+                      <cap.icon className="h-6 w-6 text-roota-green-strong" strokeWidth={1.75} />
+                    </div>
+                    <span className="flex flex-col items-center leading-none">
+                      <span className="text-[9px] font-bold tracking-wider text-roota-navy/40">
+                        POINT
+                      </span>
+                      <span className="text-lg font-black text-roota-navy/70">{cap.n}</span>
                     </span>
-                    <span className="text-base font-black text-roota-navy">{cap.n}</span>
-                  </span>
-                  <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-xl bg-roota-green-tint">
-                    <cap.icon className="h-6 w-6 text-roota-green-strong" strokeWidth={1.75} />
                   </div>
-                  <h3 className="mt-4 text-2xl font-black text-roota-navy">{cap.tag}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-roota-body">{cap.body}</p>
+                  <h3 className="mt-4 text-xl font-black text-roota-navy">{cap.tag}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-roota-body">{cap.body}</p>
                 </div>
               </article>
             </Reveal>
