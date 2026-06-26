@@ -107,8 +107,7 @@ export function Agent() {
               テンプレで手軽に。<span className="text-green-600">個別開発でここまで。</span>
             </h3>
             <p className="mt-4 max-w-2xl text-[15px] leading-[1.9] text-navy-900/60">
-              汎用テンプレート（たたき台作成・チェック・議事録）に加えて、業務に合わせて作り込むと、「人がやると重い前さばき」をエージェントに任せられます。
-              <span className="font-bold text-navy-900/80">判断は人が、下ごしらえはAIが。</span>
+              汎用テンプレート（たたき台作成・チェック・議事録）に加えて、業務に合わせて作り込むと、「人がやると重い前さばき」をエージェントに任せられます。次の業界別の例もご覧ください。
             </p>
           </Reveal>
 
