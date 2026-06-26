@@ -27,9 +27,7 @@ export function PageShell({
             <h1 className="mt-3 text-3xl font-black tracking-[0.01em] text-navy-900 sm:text-4xl">
               {title}
             </h1>
-            {updated && (
-              <p className="mt-4 text-xs text-navy-900/50">最終改定日：{updated}</p>
-            )}
+            {updated && <p className="mt-4 text-xs text-navy-900/50">{updated}</p>}
           </div>
         </section>
 

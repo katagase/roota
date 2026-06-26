@@ -10,7 +10,11 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <PageShell eyebrow="Service Terms" title="ROOTA サービス利用規約" updated="2026年6月18日">
+    <PageShell
+      eyebrow="Service Terms"
+      title="ROOTA サービス利用規約"
+      updated="制定日：2026年6月26日　施行日：2026年6月26日　最終改定日：2026年6月26日"
+    >
       <Prose>
         <p>
           本利用規約（以下「本規約」）は、ケーティージーエス合同会社（以下「当社」）が提供する社内ナレッジAI「ROOTA」（以下「本サービス」）の利用条件を定めるものです。利用者は、本規約に同意のうえ本サービスを利用するものとします。

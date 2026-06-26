@@ -53,6 +53,13 @@ export function Security() {
             ご希望に応じて、御社のサーバー内だけで運用することも可能。すべて社内で完結します。
           </p>
         </Reveal>
+
+        <Reveal delay={200}>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-navy-900/45">
+            ※ 招待・通知メールの送信のため、ユーザーのメールアドレス等が外部サービス（Microsoft
+            365）を経由する場合があります。社内文書・会話・音声などの登録データが外部のAIサービスへ送信されることはありません。
+          </p>
+        </Reveal>
       </div>
     </section>
   );

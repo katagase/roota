@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <PageShell eyebrow="Privacy Policy" title="個人情報の取扱い（プライバシーポリシー）" updated="2026年6月18日">
+    <PageShell eyebrow="Privacy Policy" title="個人情報の取扱い（プライバシーポリシー）" updated="制定日：2026年6月18日　最終改定日：2026年6月18日">
       <Prose>
         <p>
           本ページは、ケーティージーエス合同会社（以下「当社」といいます）が、社内ナレッジAI「ROOTA」（以下「本サービス」といいます）の提供にあたって取り扱う個人情報の取扱方針を定めるものです。本方針は、本サービスの
