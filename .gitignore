@@ -14,3 +14,9 @@ next-env.d.ts
 
 # allow committing the env template (but never real .env files)
 !.env.example
+
+# Local editorial / source artifacts — not part of the deployed site
+/*.md
+/*.pptx
+/AI*.png
+/.claude/
