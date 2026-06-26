@@ -1,4 +1,4 @@
-import { ClipboardCheck, Scale, Headset } from "lucide-react";
+import { ClipboardCheck, FileSearch, Headset } from "lucide-react";
 import { Reveal } from "../Reveal";
 import { IconCheck } from "../icons";
 
@@ -13,13 +13,13 @@ const USE_CASES = [
     icon: ClipboardCheck,
     title: "ISMS・セキュリティチェック回答",
     body: "自社のISMS対応状況とSaaS仕様書を学習。顧客から届くチェックシートを入れるだけで回答ドラフトを作成。「営業が受けて、エンジニアが書く」をそのまま自動化します。",
-    effect: "エンジニアの回答工数を大幅に削減",
+    effect: "エンジニアの回答工数を削減",
   },
   {
-    icon: Scale,
-    title: "法務の事前チェック",
-    body: "六法・社内規程を学習し、顧問弁護士のリーガルチェック前に論点を洗い出し。指摘されやすいポイントを先回りで整理します。",
-    effect: "弁護士費用と、やり取りの往復時間を圧縮",
+    icon: FileSearch,
+    title: "契約レビューの前さばき",
+    body: "自社の過去契約・社内規程・チェック観点を学習し、顧問弁護士のチェック前に確認ポイントを整理。法的な判断はせず、弁護士レビューの“前さばき”として使います。",
+    effect: "弁護士レビュー前の論点整理を効率化",
   },
   {
     icon: Headset,
