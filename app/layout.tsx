@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
+import { LeadTracking } from "@/components/LeadTracking";
 
 const GA_ID = "G-NE1PJ2ZYQ3";
 
@@ -99,6 +100,7 @@ export default function RootLayout({
     <html lang="ja" className={`${inter.variable} ${noto.variable}`}>
       <body className="font-sans antialiased">
         {children}
+        <LeadTracking />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
