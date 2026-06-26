@@ -10,6 +10,7 @@ const NAV = [
   { href: "/#features", label: "できること" },
   { href: "/#security", label: "セキュリティ" },
   { href: "/#pricing", label: "料金" },
+  { href: "/#faq", label: "FAQ" },
   { href: CONTACT_URL, label: "資料請求", external: true },
 ];
 

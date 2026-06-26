@@ -10,6 +10,7 @@ import { Features } from "@/components/sections/Features";
 import { Agent } from "@/components/sections/Agent";
 import { Security } from "@/components/sections/Security";
 import { Pricing } from "@/components/sections/Pricing";
+import { Faq } from "@/components/sections/Faq";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 
@@ -33,6 +34,7 @@ export default function Home() {
         <Agent />
         <Security />
         <Pricing />
+        <Faq />
         <FinalCTA />
       </main>
       <Footer />

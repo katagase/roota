@@ -7,6 +7,7 @@ const LINKS = [
   { href: "/#features", label: "できること" },
   { href: "/#security", label: "セキュリティ" },
   { href: "/#pricing", label: "料金プラン" },
+  { href: "/#faq", label: "よくある質問" },
   { href: CONTACT_URL, label: "資料請求", external: true },
   { href: CONTACT_URL, label: "お問い合わせ", external: true },
 ];
