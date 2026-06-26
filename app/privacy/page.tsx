@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <PageShell eyebrow="Privacy Policy" title="個人情報の取扱い（プライバシーポリシー）" updated="制定日：2026年6月18日　最終改定日：2026年6月26日">
+    <PageShell eyebrow="Privacy Policy" title="個人情報の取扱い（プライバシーポリシー）" updated="制定日：2026年6月18日　最終改定日：2026年6月27日">
       <Prose>
         <p>
           本ページは、ケーティージーエス合同会社（以下「当社」といいます）が、社内ナレッジAI「ROOTA」（以下「本サービス」といいます）の提供にあたって取り扱う個人情報の取扱方針を定めるものです。本方針は、本サービスの
@@ -123,7 +123,32 @@ export default function PrivacyPage() {
 
         <h2>第12条（Cookie・アクセス解析）</h2>
         <p>
-          本サイトでは、利用状況の把握およびサービス改善のため、Cookie およびアクセス解析ツールを利用します。これにより、アクセス日時・閲覧ページ・参照元・ブラウザの種別等の情報を取得しますが、これらは主に統計的な分析に用います。ブラウザの設定により Cookie を無効化できますが、その場合、本サイトの一部の機能が正しく動作しないことがあります。
+          本サイト（ROOTA 紹介サイト）では、お客様の利用状況を分析し、サービスの改善・向上に役立てる目的で Cookie を利用しています。Cookie とは、お客様が本サイトにアクセスした際に、お客様の端末に保存される小さなテキストファイルで、訪問回数や閲覧ページ等の情報を取得するために用いられます。
+        </p>
+        <p>
+          お客様は、ブラウザの設定により Cookie を無効にできます。無効にした場合でも本サイトのご利用に支障はありませんが、一部の機能が正しく動作しないことがあります。
+        </p>
+        <p>
+          本サイトでは、アクセス状況の解析のため Google LLC が提供する「Google アナリティクス（GA4）」を利用しています。これに伴い、お客様の利用状況に関する情報（閲覧ページ、リファラー、IPアドレス、ブラウザ・端末の情報、Cookie 識別子等）が、Cookie を通じて Google LLC へ送信され、同社のプライバシーポリシーに基づいて管理されます。
+        </p>
+        <ul>
+          <li>送信先事業者：Google LLC</li>
+          <li>利用目的：本サイトのアクセス解析・利用状況の把握</li>
+          <li>
+            Google のプライバシーポリシー：
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </li>
+          <li>
+            収集の無効化（オプトアウト）：
+            <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
+              Google アナリティクス オプトアウト アドオン
+            </a>
+          </li>
+        </ul>
+        <p>
+          これらの情報は統計的に処理され、それ自体から特定の個人を識別することを目的とするものではありません。なお、本項は本サイト（紹介サイト）に関するものであり、ROOTA 本体に登録された社内文書・会話・音声等のデータが外部へ送信されることはありません（第5条）。
         </p>
 
         <h2>第13条（本方針の改定）</h2>
