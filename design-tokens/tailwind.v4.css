@@ -1,0 +1,35 @@
+/* ROOTA brand colors for Tailwind CSS v4 (CSS-first @theme).
+ * This mirrors the landing page's own setup. Import into the SaaS app's
+ * main CSS after `@import "tailwindcss";`. Generates utilities like
+ * bg-roota-green, text-navy-900, border-roota-border, etc.
+ */
+@theme {
+  /* Brand green (#2E9E6B) — kept as green-* so utilities switch at once */
+  --color-green-600: #2e9e6b;
+  --color-green-500: #34ac75;
+  --color-green-400: #55c191;
+
+  --color-navy-950: #0b1730;
+  --color-navy-900: #0f1f3d; /* canonical navy / headings */
+  --color-navy-800: #16294d;
+  --color-navy-700: #1d3461;
+  --color-navy-600: #294a82;
+
+  --color-mist: #f4f6fb; /* alt section background */
+  --color-ink: #0f1f3d;
+
+  /* Icon / card system */
+  --color-roota-green: #2e9e6b;
+  --color-roota-green-strong: #1f7a50;
+  --color-roota-green-tint: #e8f4ee;
+  --color-roota-navy: #0f1f3d; /* unified to navy-900 */
+  --color-roota-navy-tint: #eaedf4;
+  --color-roota-body: #5b6577;
+  --color-roota-border: #e3e8ef;
+  --color-roota-page: #f4f6fb; /* unified to mist */
+  --color-roota-warning: #f4a23b; /* "開発予定" badge ONLY */
+  --color-roota-warning-text: #5a3508;
+
+  --font-sans: "Inter", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    Meiryo, ui-sans-serif, system-ui, sans-serif;
+}

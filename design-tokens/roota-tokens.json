@@ -1,0 +1,114 @@
+{
+  "$description": "ROOTA brand design tokens (W3C DTCG format). Source of truth: ROOTA landing page (roota.ktgs.llc). Share with the SaaS app to keep brand colors consistent.",
+  "color": {
+    "brand": {
+      "green": {
+        "$type": "color",
+        "$value": "#2E9E6B",
+        "$description": "Primary brand color. CTAs, accents, links, highlights. The single most important color to match."
+      },
+      "green-strong": {
+        "$type": "color",
+        "$value": "#1F7A50",
+        "$description": "Darker green for icon strokes / green text on light tinted backgrounds (better contrast)."
+      },
+      "green-500": {
+        "$type": "color",
+        "$value": "#34AC75",
+        "$description": "Lighter green. Also used at 8% opacity for faint green section bands."
+      },
+      "green-400": {
+        "$type": "color",
+        "$value": "#55C191",
+        "$description": "Lightest green."
+      },
+      "green-tint": {
+        "$type": "color",
+        "$value": "#E8F4EE",
+        "$description": "Pale green fill for icon tiles."
+      },
+      "navy": {
+        "$type": "color",
+        "$value": "#0F1F3D",
+        "$description": "Canonical brand navy. Headings and primary dark text. Pairs with brand green (logo = green + navy)."
+      },
+      "navy-tint": {
+        "$type": "color",
+        "$value": "#EAEDF4",
+        "$description": "Neutral pale navy for chips / tags."
+      }
+    },
+    "navy-scale": {
+      "950": { "$type": "color", "$value": "#0B1730" },
+      "900": { "$type": "color", "$value": "#0F1F3D", "$description": "= brand.navy (canonical)." },
+      "800": { "$type": "color", "$value": "#16294D" },
+      "700": { "$type": "color", "$value": "#1D3461" },
+      "600": { "$type": "color", "$value": "#294A82" }
+    },
+    "text": {
+      "heading": {
+        "$type": "color",
+        "$value": "#0F1F3D",
+        "$description": "Headings / strong dark text."
+      },
+      "body": {
+        "$type": "color",
+        "$value": "#5B6577",
+        "$description": "Body and secondary text."
+      }
+    },
+    "surface": {
+      "base": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Page background base."
+      },
+      "alt": {
+        "$type": "color",
+        "$value": "#F4F6FB",
+        "$description": "Alternating section background (light blue-gray). Use ONE alt background for the whole app."
+      },
+      "green-band": {
+        "$type": "color",
+        "$value": "#F0F8F4",
+        "$description": "Faint green section band. Flattened equivalent of green-500 at 8% opacity over white. On the LP it is authored as rgba(52,172,117,0.08)."
+      }
+    },
+    "border": {
+      "$type": "color",
+      "$value": "#E3E8EF",
+      "$description": "Card borders and divider lines."
+    },
+    "warning": {
+      "base": {
+        "$type": "color",
+        "$value": "#F4A23B",
+        "$description": "Orange. RESTRICTED: use only for the 'coming soon / 開発予定' badge. Do not use elsewhere."
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#5A3508",
+        "$description": "Text color on the warning badge."
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "latin": {
+        "$type": "fontFamily",
+        "$value": ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        "$description": "Latin text and numerals."
+      },
+      "japanese": {
+        "$type": "fontFamily",
+        "$value": ["Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "sans-serif"],
+        "$description": "Japanese text (falls through from the Latin stack)."
+      }
+    },
+    "body": {
+      "lineHeight": { "$type": "number", "$value": 1.8 },
+      "letterSpacing": { "$type": "dimension", "$value": "0.04em" },
+      "fontFeatureSettings": { "$type": "string", "$value": "\"palt\" 1", "$description": "Japanese proportional kerning." }
+    }
+  }
+}

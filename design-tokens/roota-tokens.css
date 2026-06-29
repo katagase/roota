@@ -1,0 +1,42 @@
+/* ROOTA brand design tokens — CSS custom properties.
+ * Source of truth: ROOTA landing page (roota.ktgs.llc).
+ * Drop into the SaaS app's global stylesheet (e.g. :root) to match brand colors.
+ */
+:root {
+  /* — Brand — */
+  --roota-green: #2e9e6b;          /* primary: CTAs, accents, links */
+  --roota-green-strong: #1f7a50;   /* icon strokes / green text on tint */
+  --roota-green-500: #34ac75;
+  --roota-green-400: #55c191;
+  --roota-green-tint: #e8f4ee;     /* icon tile background */
+
+  --roota-navy: #0f1f3d;           /* canonical navy: headings / dark text */
+  --roota-navy-tint: #eaedf4;      /* chips / tags */
+
+  /* Navy scale (optional shades) */
+  --roota-navy-950: #0b1730;
+  --roota-navy-900: #0f1f3d;
+  --roota-navy-800: #16294d;
+  --roota-navy-700: #1d3461;
+  --roota-navy-600: #294a82;
+
+  /* — Text — */
+  --roota-text-heading: #0f1f3d;
+  --roota-text-body: #5b6577;
+
+  /* — Surfaces — */
+  --roota-bg: #ffffff;             /* base */
+  --roota-bg-alt: #f4f6fb;         /* alternating sections (use one) */
+  --roota-bg-green-band: #f0f8f4;  /* = green-500 @ 8% over white */
+
+  /* — Lines — */
+  --roota-border: #e3e8ef;
+
+  /* — Semantic (RESTRICTED) — */
+  --roota-warning: #f4a23b;        /* "開発予定 / coming soon" badge ONLY */
+  --roota-warning-text: #5a3508;
+
+  /* — Type — */
+  --roota-font-latin: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --roota-font-jp: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+}
